@@ -17,3 +17,28 @@ const obtenerDatosAvion =()=>{
 
     return datosObtenidos;
 }
+
+//2.Almacenar
+//Almacenamos el objeto de la reserva en este array de acá abajo.
+let reservasAvion = [];
+const agregarReservaAvion = (reserva)=>{
+    reservasAvion.push(reserva);
+}
+
+//3.Mostrar en pantalla
+
+const mostrarReservaAvion = (reserva)=>{
+    let resumenAvion = document.querySelector('#resumenAvion');
+    resumenAvion.innerHTML = `
+        <p><strong>Nombre completo: </strong>${reserva.nombre}</p>
+        <p><strong>dni: </strong>${reserva.dni}</p>
+        <p><strong>Teléfono: </strong>${reserva.telefono}</p>
+        <p><strong>Origen: </strong>${reserva.origen}</p>
+        <p><strong>Destino: </strong>${reserva.destino}</p>
+        <p><strong>Fecha: </strong>${reserva.fecha}</p>
+        <p><strong>Hora: </strong>${reserva.hora}</p>
+        <p><strong>Clase: </strong>${reserva.clase}</p>
+        <p><strong>Equipaje: </strong>${reserva.equipaje}</p>
+        --------------------------------------------------------
+    `;
+};
